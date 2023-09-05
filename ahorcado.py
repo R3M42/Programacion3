@@ -4,19 +4,23 @@ def jugar():
     print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
     
     palabra_secreta = "mandarina"
+    letras_acertadas = ["_","_","_","_","_","_","_","_","_"]
     
     ahorcado = False
     acerto = False
     
+    print(letras_acertadas)
     while(not ahorcado and not acerto):
         entrada = input ("Ingrese una letra...")
+        entrada = entrada.strip()                # elimina el espacion en blanco a la izquierda
+        entrada = entrada.lower()                # convierte a letras minusculas
         indice = 0
         for letra in palabra_secreta:
             if(entrada==letra):
-                print("Se encontro la letra {} en la posición {}".format(letra,indice))
+                letras_acertadas[indice] = letra
                 
             indice = indice + 1
-        print("Jugando....")
+        print(letras_acertadas)
         
         
     print("Fin del juego")
