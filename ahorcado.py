@@ -1,9 +1,23 @@
+import random
+
 def jugar():
     print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
     print ("Bienvenido al juego del ahorcado")
     print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
     
     palabra_secreta = "mandarina"
+    letras_acertadas = ["_" for elemento in palabra_secreta]
+    
+    archivo = open ("palabras.txt","r")
+    palabras = []
+    for linea in archivo:
+        linea = linea.strip()
+        palabras.append(linea)
+        
+    archivo.close()
+    numero = random.randrange(0,len(palabras))          #Indice para las palabras
+    
+    palabra_secreta = palabras[numero].lower()
     letras_acertadas = ["_" for elemento in palabra_secreta]
     
     ahorcado = False
