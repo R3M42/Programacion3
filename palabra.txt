@@ -1,0 +1,6 @@
+platano
+durazno
+frutilla
+manzana
+kiwi
+uva

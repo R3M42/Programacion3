@@ -1,4 +1,6 @@
-plátano
+platano
 durazno
 frutilla
 manzana
+kiwi
+uva
